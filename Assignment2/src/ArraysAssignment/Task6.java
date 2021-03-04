@@ -18,18 +18,39 @@ public class Task6 {
 		}
 		//read the user created array
 		System.out.println("Array Created");
-		System.out.println(Arrays.toString(ar));
+		for (int i = 0; i < ar.length; i++) {
+			System.out.print(ar[i]+" ");
+			
+		}
 
-		//Update the user created array by changing the odd numbers to 0
-		for (int i = 0; i < n; i++) {
-			if(!(ar[i]%2==0)) {
-				ar[i] = 0;
-			}
+		//Update the user created array
+		System.out.println("\n \n"+"Enter new element to put into array: ");
+		int elem = sc.nextInt();
+		System.out.println("What postition will element replace: ");
+		int pos = sc.nextInt();
+		
+		ar[pos-1] = elem;
+		System.out.println("New Array:");
+		for (int i = 0; i < ar.length; i++) {
+			System.out.print(ar[i]+" ");
 			
 		}
 		
-		System.out.println("Updated array with odd numbers changed to 0");
-		System.out.println(Arrays.toString(ar));
+		//delete an element and move the array if necessary
+		System.out.println("\n \n"+"Enter position of element to be deleted: ");
+		int delpos = sc.nextInt();
+		
+		ar[delpos-1] = 0;
+		for (int i = delpos-1; i < ar.length+1; i++) {
+			ar[i]=ar[i+1];
+		}
+		System.out.println("New Array:");
+		for (int i = 0; i < ar.length; i++) {
+			System.out.print(ar[i]+" ");
+			
+		}
+		
+		
 	}
 
 }
