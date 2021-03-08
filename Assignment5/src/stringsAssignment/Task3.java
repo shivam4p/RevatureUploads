@@ -11,13 +11,14 @@ public class Task3 {
 		System.out.println("Enter a string: ");
 		String input = sc.nextLine();
 		System.out.println("You entered: "+input);
+		String s1[] = input.split("");
 		
-		char c[] = input.toCharArray();
-		for (int i = 0; i < c.length; i++) {
+		for (int i = 0; i < s1.length; i++) {
 			if (isPrime(i)) {
-				c[i].toUpperCase;
+				System.out.println(i + " is prime so the index character there is uppercase: "+ s1[i].toUpperCase());
 			}
 		}
+		
 	}
 	
 	//Method to find prime numbers
