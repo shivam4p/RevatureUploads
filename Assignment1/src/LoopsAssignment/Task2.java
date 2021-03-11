@@ -37,7 +37,7 @@ public class Task2 {
 		//loops through the num given to get the reverse
 		while(num!=0) {
 			reverseNum = reverseNum*10 + num%10; //loops though the original number and begins flipping
-			num = num/10; // reduces num by 10s place (div eliminates remainder) to begin store of that number, unless num gets to 0
+			num = num/10; // reduces num by 10s place (div eliminates int decimal) to begin store of that number, unless num gets to 0
 		}
 		
 		if(originalNum == reverseNum) {

@@ -1,0 +1,13 @@
+package com.demo.playerdao;
+
+import com.demo.model.Player;
+
+public interface PlayerDAO {
+
+	public int addPlayer(Player player);
+	public int updatePlayerCity(int id, String newCity);
+	public int deletePlayer(int id);
+	public Player getPlayerById(int id);
+	public List<Player> getAllPlayers();
+	public List<Player> getAllPlayersByAge(int age);
+}
